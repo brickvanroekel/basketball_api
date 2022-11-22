@@ -50,4 +50,54 @@
         <outSequence/>
         <faultSequence/>
     </resource>
+    <resource methods="GET" uri-template="/stagesByID/{id}">
+        <inSequence>
+            <call>
+                <endpoint key="stagesById"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/addStage">
+        <inSequence>
+            <call>
+                <endpoint key="stagesAdd"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="DELETE" uri-template="/deleteStage/{id}">
+        <inSequence>
+            <call>
+                <endpoint key="stagesDelete"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="PUT" uri-template="/updateStage/{id}">
+        <inSequence>
+            <call>
+                <endpoint key="stagesUpdate"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/byYear/{year}">
+        <inSequence>
+            <call>
+                <endpoint key="stagesByYear"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
 </api>

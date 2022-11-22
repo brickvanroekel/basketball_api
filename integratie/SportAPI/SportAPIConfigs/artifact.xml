@@ -23,4 +23,19 @@
     <artifact name="stagesAll" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/endpoints/stagesAll.xml</file>
     </artifact>
+    <artifact name="stagesById" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/stagesById.xml</file>
+    </artifact>
+    <artifact name="stagesAdd" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/stagesAdd.xml</file>
+    </artifact>
+    <artifact name="stagesDelete" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/stagesDelete.xml</file>
+    </artifact>
+    <artifact name="stagesUpdate" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/stagesUpdate.xml</file>
+    </artifact>
+    <artifact name="stagesByYear" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/stagesByYear.xml</file>
+    </artifact>
 </artifacts>
