@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="premierLeagueAll" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/premierLeagueAll.xml</file>
+    </artifact>
+    <artifact name="premierLeagueUpdate" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/premierLeagueUpdate.xml</file>
+    </artifact>
+    <artifact name="premierLeagueAdd" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/premierLeagueAdd.xml</file>
+    </artifact>
+    <artifact name="sportAPI" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/sportAPI.xml</file>
+    </artifact>
+    <artifact name="sportAPI_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/sportAPI_swagger.yaml</file>
+    </artifact>
+    <artifact name="sportAPI_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/sportAPI_metadata.yaml</file>
+    </artifact>
+    <artifact name="premierLeagueDelete" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/premierLeagueDelete.xml</file>
+    </artifact>
+    <artifact name="stagesAll" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/stagesAll.xml</file>
+    </artifact>
+</artifacts>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/sportAPI" name="sportAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/all">
+        <inSequence>
+            <call>
+                <endpoint key="premierLeagueAll"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/add">
+        <inSequence>
+            <call>
+                <endpoint key="premierLeagueAdd"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="PUT" uri-template="/update">
+        <inSequence>
+            <call>
+                <endpoint key="premierLeagueUpdate"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="DELETE" uri-template="/delete">
+        <inSequence>
+            <call>
+                <endpoint key="premierLeagueDelete"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/stagesAll">
+        <inSequence>
+            <call>
+                <endpoint key="stagesAll"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
