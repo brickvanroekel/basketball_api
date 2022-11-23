@@ -1,0 +1,122 @@
+openapi: 3.0.1
+info:
+  title: sportAPI
+  description: API Definition of sportAPI
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/sportAPI
+paths:
+  /all:
+    get:
+      responses:
+        default:
+          description: Default response
+  /add:
+    post:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
+  /update:
+    put:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
+  /delete:
+    delete:
+      responses:
+        default:
+          description: Default response
+  /stagesAll:
+    get:
+      responses:
+        default:
+          description: Default response
+  /stagesByID/{id}:
+    get:
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response
+  /addStage:
+    post:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
+  /deleteStage/{id}:
+    delete:
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response
+  /updateStage/{id}:
+    put:
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response
+  /byYear/{year}:
+    get:
+      parameters:
+      - name: year
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response

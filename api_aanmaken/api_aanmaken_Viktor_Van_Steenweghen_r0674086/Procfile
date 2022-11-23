@@ -1,0 +1,1 @@
+web: gunicorn api_sport.wsgi:application --log-file -
