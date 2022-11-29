@@ -1,0 +1,6 @@
+- 0:0:0:0:0:0:0:1  - [29/Nov/2022:13:14:04.983 +0100] "- - " 200 - "-" "-"
+- 0:0:0:0:0:0:0:1 - - [29/Nov/2022:13:14:04.983 +0100] "OPTIONS /stages/1.0/all HTTP/1.1" - - "https://localhost:9443/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+- 54.220.192.176  - [29/Nov/2022:13:14:13.277 +0100] "- - " 200 - "-" "-"
+- 0:0:0:0:0:0:0:1 - - [29/Nov/2022:13:14:04.983 +0100] "GET /stages/1.0/all HTTP/1.1" - - "https://localhost:9443/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+- 0:0:0:0:0:0:0:1  - [29/Nov/2022:13:14:13.310 +0100] "- - " 200 - "-" "-"
+- 54.220.192.176 - - [29/Nov/2022:13:14:05.916 +0100] "GET /stages/all HTTP/1.1" - - "https://localhost:9443/" "Synapse-PT-HttpComponents-NIO"
