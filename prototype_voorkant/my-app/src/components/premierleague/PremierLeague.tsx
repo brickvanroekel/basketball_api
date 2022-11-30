@@ -1,30 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import StageService from '../../services/StageService';
+import PremierLeagueService from '../../services/PremierLeagueService';
 import axios, { AxiosResponse } from 'axios';
 
 
 const PremierLeague: React.FC = () => {
     const [matches, setMatches] = useState<Array<any>>([]);
-    const requestOptions = {
-        headers: {'Content-Type':'application/json','Access-Control-Allow-Origin':'*'}
-    }
     useEffect(()=>{
-        fetch('https://premierleague-app.herokuapp.com/all',requestOptions)
-        .then((res) => res.json())
-        .then((data)=> {
-            setMatches(data)
-        })
-        .catch((err)=>{
-            console.log(err)
-        })
-    }, []);
-    // const deleteMatch = (id: Number) => {
-    //     const body = {"id": id}
-    //     fetch('https://premierleague-app.herokuapp.com/delete',{
-    //         method: 'DELETE',
-    //         body: body
-    //     })
-    // }
+        getMatches()
+    })
+    const getMatches = async () => {
+        const res: AxiosResponse<Array<any>> = await PremierLeagueService.getAllMatches();
+        setMatches(res.data);
+    };
+
     return (
         <div>
             <table>

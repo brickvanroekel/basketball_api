@@ -1,19 +1,21 @@
 import axios from "axios";
 import { FC, SetStateAction, useState } from "react";
+import PremierLeagueService from "../../services/PremierLeagueService";
+import { Match } from "../../types/match";
 
 interface MatchAddProps {}
 
 const MatchAdd: FC<MatchAddProps> = () => {
     const [divison, setDivision] = useState('');
-    const [MatchDate, setMatchDate] = useState(new Date());
+    //const [MatchDate, setMatchDate] = useState(new Date());
     const [HomeTeam, setHomeTeam] = useState('');
     const [AwayTeam, setAwayTeam] = useState('');
     const [FTHG, setfthg] = useState(0);
     const [FTAG, setftag] = useState(0);
-    const [FTR, setftr] = useState('');
+    const [FTR, setftr] = useState(0);
     const [HTHG, sethtgh] = useState(0);
     const [HTAG, sethtag] = useState(0);
-    const [HTR, sethtr] = useState('');
+    const [HTR, sethtr] = useState(0);
     const [Referee, setReferee] = useState('');
     const [HS, seths] = useState(0);
     const [AS2, setas2] = useState(0);
@@ -39,23 +41,23 @@ const MatchAdd: FC<MatchAddProps> = () => {
         setAwayTeam(event.target.value)
     }
     const handleFTHG = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        setfthg(Number(Number(event.target.value)))
+        setfthg(Number(event.target.value))
         console.log(FTHG)
     }
     const handleFTAG = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        setftag(Number(Number(event.target.value)))
+        setftag(Number(event.target.value))
     }
-    const handleFTR = (event: { target: { value: SetStateAction<string>; }; }) => {
-        setftr(event.target.value)
+    const handleFTR = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        setftr(Number(event.target.value))
     }
     const handleHTHG = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        sethtgh(Number(Number(event.target.value)))
+        sethtgh(Number(event.target.value))
     }
     const handleHTAG = (event: React.ChangeEvent<HTMLInputElement>): void => {
-        sethtag(Number(Number(event.target.value)))
+        sethtag(Number(event.target.value))
     }
-    const handleHTR = (event: { target: { value: SetStateAction<string>; }; }) => {
-        sethtr(event.target.value)
+    const handleHTR = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        sethtr(Number(event.target.value))
     }
     const handleReferee = (event: { target: { value: SetStateAction<string>; }; }) => {
         setReferee(event.target.value)
@@ -97,13 +99,14 @@ const MatchAdd: FC<MatchAddProps> = () => {
         setar(Number(event.target.value))
     }
     const handleSubmit = ():void => {
-        const match = {
+        const match: Match = {
             Division: divison,
             MatchDate: new Date(),
             HomeTeam: HomeTeam,
             AwayTeam: AwayTeam,
             FTHG: FTHG,
             FTAG: FTAG,
+            FTR:FTR,
             HTHG: HTHG,
             HTAG: HTAG,
             HTR: HTR,
@@ -121,9 +124,11 @@ const MatchAdd: FC<MatchAddProps> = () => {
             HR: HR,
             AR: AR
         };
-        console.log("added")
-        console.log(match)
+        console.log(match);
+        console.log('test')
+        PremierLeagueService.addMatch(match);
         axios.post('https://premierleague-app.herokuapp.com/add', match)
+        console.log(match)
     }
     return (
         <form onSubmit={handleSubmit}>
@@ -132,10 +137,10 @@ const MatchAdd: FC<MatchAddProps> = () => {
           <label>AwayTeam:<input type="text" value={AwayTeam} onChange={handleAwayteamChange}/></label>
           <label>FTHG:<input type="number" value={FTHG} onChange={handleFTHG}/></label>
           <label>FTAG:<input type="number" value={FTAG} onChange={handleFTAG}/></label>
-          <label>FTR:<input type="text" value={FTR} onChange={handleFTR}/></label>
+          <label>FTR:<input type="number" value={FTR} onChange={handleFTR}/></label>
           <label>HTHG:<input type="number" value={HTHG} onChange={handleHTHG}/></label>
           <label>HTAG:<input type="number" value={HTAG} onChange={handleHTAG}/></label>
-          <label>HTR:<input type="text" value={HTR} onChange={handleHTR}/></label>
+          <label>HTR:<input type="number" value={HTR} onChange={handleHTR}/></label>
           <label>Referee:<input type="text" value={Referee} onChange={handleReferee}/></label>
           <label>HS:<input type="number" value={HS} onChange={handleHS}/></label>
           <label>AS2:<input type="number" value={AS2} onChange={handleAS2}/></label>
