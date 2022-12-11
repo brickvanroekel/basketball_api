@@ -21,8 +21,8 @@ class Players(models.Model):
     country = models.CharField(max_length=30)
 
 class Games(models.Model):
-    homeTeam = models.ForeignKey(Teams, on_delete=models.SET_NULL, to_field='name', null=True, related_name='homeTeam', unique=True)
-    roadTeam = models.ForeignKey(Teams, on_delete=models.SET_NULL, to_field='name', null=True, related_name='roadTeam', unique=True)
+    homeTeam = models.ForeignKey(Teams, on_delete=models.SET_NULL, to_field='name', null=True, related_name='homeTeam')
+    roadTeam = models.ForeignKey(Teams, on_delete=models.SET_NULL, to_field='name', null=True, related_name='roadTeam')
     homeTeamPoints = models.IntegerField()
     roadTeamPoints = models.IntegerField()
     date = models.DateField()
